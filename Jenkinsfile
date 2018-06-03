@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Artifact') {
       steps {
-        archiveArtifacts(artifacts: 'a1ecommerce.war', onlyIfSuccessful: true)
+        archiveArtifacts(artifacts: 'project/target/*war', onlyIfSuccessful: true)
       }
     }
     stage('End') {
